@@ -1,7 +1,7 @@
 {
   "type": "module",
-  "name": "svelte-tailwind",
-  "version": "0.0.1",
+  "name": "svelte-template",
+  "version": "0.1.0",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
