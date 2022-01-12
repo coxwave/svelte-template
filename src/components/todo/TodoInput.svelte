@@ -11,7 +11,6 @@
   const dispatch = createEventDispatcher<{ submit: TodoSimple }>();
 
   const handleSubmit = (e: Event) => {
-    e.preventDefault();
     loading = true;
     postTodo({ text: todoText })
       .then((todoId) => {
@@ -26,7 +25,7 @@
   };
 </script>
 
-<form class={$$props.class} name="todo" id="todo" on:submit={handleSubmit}>
+<form class={$$props.class} name="todo" id="todo" on:submit|preventDefault={handleSubmit}>
   <input
     type="text"
     bind:value={todoText}
