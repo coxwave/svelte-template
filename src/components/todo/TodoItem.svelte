@@ -32,7 +32,6 @@
   };
 
   const handleUpdateText = async (e: Event) => {
-    e.preventDefault();
     loading = true;
     try {
       await patchTodoById(todo._id, { text: value });
@@ -70,7 +69,7 @@
     {/if}
   </button>
 
-  <form class="group" on:submit={handleUpdateText}>
+  <form class="group" on:submit|preventDefault={handleUpdateText}>
     <input
       aria-label="Edit todo"
       type="text"
