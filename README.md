@@ -1,38 +1,43 @@
-# create-svelte
+# Svelte-template
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+Svelte-template using svelte-kit by [`coxwave`](https://github.com/coxwave)
 
 ## Creating a project
 
-If you're seeing this, you've probably already done this step. Congrats!
-
 ```bash
 # create a new project in the current directory
-npm init svelte@next
+git clone https://github.com/coxwave/svelte-template.git .
 
-# create a new project in my-app
-npm init svelte@next my-app
+# create a new project in svelte-template
+git clone https://github.com/coxwave/svelte-template.git svelte-template
 ```
 
-> Note: the `@next` is temporary
+## Connect to mongoDB
+
+```bash
+# make .env.local file
+touch .env.local
+```
+
+Please connect your own [`mongoDB atlas`](https://www.mongodb.com/cloud/atlas/register?utm_content=rlsapostreg&utm_source=google&utm_campaign=gs_apac_rlsamulti_search_brand_dsa_atlas_desktop_rlsa_postreg&utm_term=&utm_medium=cpc_paid_search&utm_ad=&utm_ad_campaign_id=14412646494&adgroup=131761134692&gclid=Cj0KCQiA8vSOBhCkARIsAGdp6RSQqqo-v1YCJl8GD1atZuU6ejWr9xhZiENsRZJ_OIu1bBOyA7TYmnIaAkqiEALw_wcB) and fill envelopment varables in .env.local file (See sample.env.local)
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've created a project and installed dependencies with `yarn install` (or `yarn`), start a development server:
 
 ```bash
-npm run dev
+yarn dev
 
 # or start the server and open the app in a new browser tab
-npm run dev -- --open
+yarn dev -- --open
 ```
 
 ## Building
 
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
+Before creating a production version of your app
 
 ```bash
-npm run build
+yarn run build
 ```
 
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+> You can preview the built app after `yarn build` with `yarn preview`
