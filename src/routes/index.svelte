@@ -1,6 +1,4 @@
 <script context="module" lang="ts">
-  import type { Load } from '@sveltejs/kit';
-
   export const load: Load = async ({ fetch }) => {
     const res = await fetch('/todo/count.json');
 
@@ -26,6 +24,8 @@
 
   import { TodoInput, TodoItem } from '$components/todo';
   import { Alert } from '$components/ui';
+
+  import type { Load } from '@sveltejs/kit';
 
   // Props from `load` function
   export let count: GetTodoCountResult['count'];
