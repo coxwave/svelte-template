@@ -1,12 +1,12 @@
 <script lang="ts" context="module">
-  import type { ErrorLoad } from '@sveltejs/kit';
-
   export const load: ErrorLoad = ({ error, status }) => {
     return { props: { error, status } };
   };
 </script>
 
 <script lang="ts">
+  import type { ErrorLoad } from '@sveltejs/kit';
+
   export let error: Error;
   export let status: number;
 </script>
