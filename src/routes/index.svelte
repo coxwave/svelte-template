@@ -1,4 +1,5 @@
 <script context="module" lang="ts">
+  // eslint-disable-next-line
   import type { Load } from '@sveltejs/kit';
 
   export const load: Load = async ({ fetch }) => {

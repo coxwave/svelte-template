@@ -1,16 +1,16 @@
 <script lang="ts">
+  import { createEventDispatcher } from 'svelte';
+
   import { showError, showNoti } from '$lib/hooks/use-noti';
   import { postTodo } from '$lib/todo/client';
   import type { TodoSimple } from '$lib/todo/model';
 
-  import { createEventDispatcher } from 'svelte';
-
-  let todoText: string = '';
-  let loading: boolean = false;
+  let todoText = '';
+  let loading = false;
 
   const dispatch = createEventDispatcher<{ submit: TodoSimple }>();
 
-  const handleSubmit = (e: Event) => {
+  const handleSubmit = () => {
     loading = true;
     postTodo({ text: todoText })
       .then((todoId) => {

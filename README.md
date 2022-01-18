@@ -41,3 +41,15 @@ yarn run build
 ```
 
 > You can preview the built app after `yarn build` with `yarn preview`
+
+## Eslint
+
+Add `svelte` on eslint.validate field in vscode preferences settings.json file like code below
+
+```
+{
+  ...,
+  "eslint.validate": ["svelte"],
+  ...,
+}
+```

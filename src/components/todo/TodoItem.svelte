@@ -1,11 +1,11 @@
 <script lang="ts">
+  import clsx from 'clsx';
   import { createEventDispatcher } from 'svelte';
   import { scale } from 'svelte/transition';
-  import clsx from 'clsx';
 
+  import { showError } from '$lib/hooks/use-noti';
   import { deleteTodoById, patchTodoById } from '$lib/todo/client';
   import type { TodoSimple } from '$lib/todo/model';
-  import { showError } from '$lib/hooks/use-noti';
 
   import { CheckIcon, PencilAltIcon, TrashIcon } from '$components/icons';
 
@@ -13,8 +13,8 @@
   export let todo: TodoSimple;
 
   let value = todo.text;
-  let loading: boolean = false;
-  let editing: boolean = false;
+  let loading = false;
+  let editing = false;
 
   const dispatch = createEventDispatcher<{ update: TodoSimple; delete: OurId }>();
 
@@ -31,7 +31,7 @@
     }
   };
 
-  const handleUpdateText = async (e: Event) => {
+  const handleUpdateText = async () => {
     loading = true;
     try {
       await patchTodoById(todo._id, { text: value });
