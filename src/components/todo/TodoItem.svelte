@@ -1,13 +1,12 @@
 <script lang="ts">
   import clsx from 'clsx';
+  import { CheckIcon, PencilAltIcon, TrashIcon } from 'heroicons-svelte/outline';
   import { createEventDispatcher } from 'svelte';
   import { scale } from 'svelte/transition';
 
   import { showError } from '$lib/hooks/use-noti';
   import { deleteTodoById, patchTodoById } from '$lib/todo/client';
   import type { TodoSimple } from '$lib/todo/model';
-
-  import { CheckIcon, PencilAltIcon, TrashIcon } from '$components/icons';
 
   // Props
   export let todo: TodoSimple;

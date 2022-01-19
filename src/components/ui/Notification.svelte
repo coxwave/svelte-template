@@ -1,10 +1,9 @@
 <script lang="ts">
   import { Transition } from '@rgossiaux/svelte-headlessui';
   import clsx from 'clsx';
+  import { CheckCircleIcon, XCircleIcon, XIcon } from 'heroicons-svelte/outline';
 
   import { notiStore, closeNoti, NotificationProps } from '$lib/hooks/use-noti';
-
-  import { CheckCircleIcon, XCircleIcon, XIcon } from '$components/icons';
 
   let props: NotificationProps;
 

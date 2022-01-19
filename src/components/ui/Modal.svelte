@@ -1,10 +1,9 @@
 <script lang="ts">
   import { Transition, TransitionChild, Dialog, DialogOverlay } from '@rgossiaux/svelte-headlessui';
   import clsx from 'clsx';
+  import { CheckIcon, ExclamationIcon } from 'heroicons-svelte/outline';
 
   import { closeModal, ModalProps, modalStore } from '$lib/hooks/use-modal';
-
-  import { CheckIcon, ExclamationIcon } from '$components/icons';
 
   let props: ModalProps;
 
