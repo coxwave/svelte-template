@@ -43,6 +43,7 @@
     "bowser": "2.11.0",
     "clsx": "1.1.1",
     "cookie": "0.4.1",
+    "heroicons-svelte": "0.0.1",
     "http-status-codes": "2.2.0",
     "joi": "17.5.0",
     "ky": "0.28.7",
